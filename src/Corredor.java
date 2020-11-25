@@ -1,6 +1,7 @@
 
 
 public class Corredor extends Thread{
+
     Carrera car;
 
     public Corredor(Carrera car) {
