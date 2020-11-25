@@ -8,14 +8,11 @@ public class Carrera {
     Carrera (Ppal prin){
         this.prin=prin;
     }
-    public String lista[] = prin.paises;
     public static final int MAX_GENTE = 9;
     public static Semaphore campo = new Semaphore(MAX_GENTE, true);
 
-    public void empieza(Corredor corr){
-
-
-
+    public void empieza(Corredor corr) throws InterruptedException {
+        campo.acquire();
     }
 
     public void comienzaCArr(Corredor corr){
@@ -24,7 +21,7 @@ public class Carrera {
             int dormir =ejem.nextInt(4000);
             Thread.sleep(dormir);
 
-            int obst = 9;
+            int obst = 5;
             if(ejem.nextInt(9)!=obst){
                 campo.release();
             }else{
