@@ -30,16 +30,15 @@ public class Carrera {
 
 
     // bloque para calcular la puntuación
-
     public void expulsa() {
         if (hilosFinalizados == MAX_GENTE) {
-            System.out.println("Hemos expulsado a los 5 ultimos...por pringados");
+            System.out.println("Paises eliminados");
             for (int i = 0; i < 5; i++) {
                 campo.release();
             }
         } else if (hilosFinalizados == 15) {
             System.out.println("Han acabado todos los hilos");
-            System.out.println(corredorConMaximaPuntuacion.getName() + " es el que mas puntuacion ha obtenido con un total de:"
+            System.out.println(corredorConMaximaPuntuacion.getName() + " que mas puntuacion ha obtenido con un total de:"
                     + corredorConMaximaPuntuacion.getPuntuacion());
         }
     }
