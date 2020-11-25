@@ -1,29 +1,33 @@
-
+import java.util.Random;
 
 public class Corredor extends Thread{
 
-    Carrera car;
-    int puntuacion;
 
-    public Corredor(Carrera car) {
-        this.car = car;
+    public Pais pais;
+
+    public Corredor(Pais pais) {
+        this.pais = pais;
     }
 
     @Override
     public void run() {
-        try {
-            car.empieza(this);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        Random random = new Random();
+        int tiempo = 0;
+
+        tiempo = random.nextInt(4000)+1000;
+
+
+        pais.next(this,tiempo);
+
+
+        if(random.nextInt(100) <= 100 ){
+            pais.anteriorAcaba(this);
+
+        }else{
+
+            System.out.println("creo que estoy lesionado");
+            pais.anteriorAcaba(this);
         }
-        System.out.println(getName());
-    }
 
-    public int getPuntuacion() {
-        return puntuacion;
-    }
-
-    public void setPuntuacion(int puntuacion) {
-        this.puntuacion = puntuacion;
     }
 }

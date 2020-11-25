@@ -1,9 +1,8 @@
 
 public class Main {
+    public static void main(String[] args) {
 
+        Principal prin = new Principal();
 
-    public static void main(String [] args){
-        Ppal princi = new Ppal();
     }
-
 }
