@@ -10,11 +10,15 @@ import java.util.concurrent.Semaphore;
 
 
 public class Carrera {
+
     Ppal prin;
+    // llamada a ambulancia
+    Ambulancia ambulancia;
+
     Carrera (Ppal prin){
         this.prin=prin;
     }
-    public int numero= 109;
+    public int numero = 109;
     public static final int MAX_GENTE = 9;
     public static Semaphore campo = new Semaphore(MAX_GENTE, true);
 
@@ -30,6 +34,10 @@ public class Carrera {
 
 
     // bloque para calcular la puntuación
+    /*
+    Mi intención era con bloque lo queria plantear para calcular al ganado
+
+     */
     public void expulsa() {
         if (hilosFinalizados == MAX_GENTE) {
             System.out.println("Paises eliminados");
@@ -61,7 +69,8 @@ public class Carrera {
             if(ejem.nextInt(9)!=obst){
                 campo.release();
             }else{
-
+                System.out.println(corr.getName()+" Me he caido");
+                ambulancia.start();
             }
 
         } catch (InterruptedException e) {

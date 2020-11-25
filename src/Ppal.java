@@ -4,7 +4,7 @@ public class Ppal {
     int MAX = 36;
     int MAX_PAISES = 9;
     int num=100;
-
+    public int vuelta = 1;
 
     public String paises[]={"España","Alemania","Francia","Andorra","Austria","Brasil","Venezuela","Cataluña","Italia"};
 
