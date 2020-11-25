@@ -3,6 +3,7 @@
 public class Corredor extends Thread{
 
     Carrera car;
+    int puntuacion;
 
     public Corredor(Carrera car) {
         this.car = car;
@@ -16,5 +17,13 @@ public class Corredor extends Thread{
             e.printStackTrace();
         }
         System.out.println(getName());
+    }
+
+    public int getPuntuacion() {
+        return puntuacion;
+    }
+
+    public void setPuntuacion(int puntuacion) {
+        this.puntuacion = puntuacion;
     }
 }
