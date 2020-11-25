@@ -33,10 +33,14 @@ public class Carrera {
     public Corredor corredorConMaximaPuntuacion = null;
 
 
-    // bloque para calcular la puntuación
-    /*
-    Mi intención era con bloque lo queria plantear para calcular al ganado
 
+
+
+
+    /*
+    bloque para calcular la puntuación
+    Mi intención era con bloque lo queria plantear para calcular al ganado,
+    tenia en mente que el pais que finalizase la carrera calcularlo frente a los demas paises
      */
     public void expulsa() {
         if (hilosFinalizados == MAX_GENTE) {
