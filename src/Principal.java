@@ -1,7 +1,7 @@
 public class Principal{
     private static final int PAISESPORTIEMPO = 9;
 
-    // con esto obtengo cuantos paises han terminado
+
     public int paisesTerminados = 0;
 
     public static Pais paisWIN;

@@ -10,7 +10,7 @@ public class Pais extends Thread {
     Principal call;
 
     public Pais(Principal callback) {
-        this.call = call;
+        this.call = callback;
     }
 
 
@@ -47,6 +47,4 @@ public class Pais extends Thread {
             call.incrementarPaisesTerminados();
         }
     }
-
-
 }
